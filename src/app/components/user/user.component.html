@@ -1,23 +1,59 @@
 <div class="mt-5">
-    <div class="card-header p-3 text-center">Users</div>
+    <h4 class="card-header p-3 text-center">Users</h4>
     <div class="card-body">
-        <form [formGroup]="formulario">
+        <form [formGroup]="formulario" class="container mt-4">
             <div class="form-group mb-2">
                 <label for="name">Nombre</label>
                 <input id="name" type="text" class="form-control" formControlName="name">
             </div>
             <div class="form-group mb-2">
-                <label for="name">Correo Electronico</label>
-                <input id="name" type="text" class="form-control" formControlName="name">
+                <label for="email">Correo Electronico</label>
+                <input id="email" type="text" class="form-control" formControlName="email">
             </div>
             <div class="form-group mb-2">
-                <label for="name">Telefono</label>
-                <input id="name" type="text" class="form-control" formControlName="name">
+                <label for="phone">Telefono</label>
+                <input id="phone" type="text" class="form-control" formControlName="phone">
             </div>
             <div class="form-group mb-2">
-                <label for="name">Direccion</label>
-                <input id="name" type="text" class="form-control" formControlName="name">
+                <label for="address">Direccion</label>
+                <input id="address" type="text" class="form-control" formControlName="address">
+            </div>
+            
+        </form>
+
+        <h4 class="card-header p-3 text">Direccion</h4>
+        <form [formGroup]="AddressFormulario" class="container mt-4">
+            <div class="form-group mb-2">
+                <label for="street">Calle</label>
+                <input id="street" type="text" class="form-control" formControlName="street">
+            </div>
+            <div class="form-group mb-2">
+                <label for="suite">Apartamento</label>
+                <input id="suite" type="text" class="form-control" formControlName="suite">
+            </div>
+            <div class="form-group mb-2">
+                <label for="city">Ciudad</label>
+                <input id="city" type="text" class="form-control" formControlName="city">
+            </div>
+            <div class="form-group mb-2">
+                <label for="zipcode">Codigo</label>
+                <input id="zipcode" type="text" class="form-control" formControlName="zipcode">
             </div>
         </form>
+        <h4 class="card-header p-3 text">Geolocalizacion</h4>
+        <form [formGroup]="GeoFormulario" class="container mt-4">
+            <div class="form-group mb-2">
+                <label for="lat">Latitud</label>
+                <input id="lat" type="number" class="form-control" formControlName="lat">
+            </div>
+            <div class="form-group mb-2">
+                <label for="lng">Longitud</label>
+                <input id="lng" type="number" class="form-control" formControlName="lng">
+            </div>
+        <button class="btn btn-primary " (click)="createUser()">crear Usuario </button>
+        </form>
+
+        
     </div>
+
 </div>
