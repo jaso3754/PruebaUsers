@@ -82,6 +82,7 @@ export class UserComponent implements OnInit {
   }
   
   createUser() {
+
     const geo = {
       lat: this.GeoFormulario.value.lat,
       lng: this.GeoFormulario.value.lat,
@@ -102,8 +103,6 @@ export class UserComponent implements OnInit {
       phone: this.formulario.value.phone,
       address: address,
     }
-
-
 
      this.userservice.createUser(userp).subscribe( (res) => {
       console.log('la informacion se ha enviado correctamente', res);
