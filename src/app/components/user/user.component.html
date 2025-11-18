@@ -1,59 +1,78 @@
 <div class="mt-5">
-    <h4 class="card-header p-3 text-center">Users</h4>
-    <div class="card-body">
-        <form [formGroup]="formulario" class="container mt-4">
-            <div class="form-group mb-2">
-                <label for="name">Nombre</label>
-                <input id="name" type="text" class="form-control" formControlName="name">
-            </div>
-            <div class="form-group mb-2">
-                <label for="email">Correo Electronico</label>
-                <input id="email" type="text" class="form-control" formControlName="email">
-            </div>
-            <div class="form-group mb-2">
-                <label for="phone">Telefono</label>
-                <input id="phone" type="text" class="form-control" formControlName="phone">
-            </div>
-            <div class="form-group mb-2">
-                <label for="address">Direccion</label>
-                <input id="address" type="text" class="form-control" formControlName="address">
-            </div>
-            
-        </form>
+  <h4 class="card-header p-3 text-center">Users</h4>
 
-        <h4 class="card-header p-3 text-center">Direccion</h4>
-        <form [formGroup]="AddressFormulario" class="container mt-4">
-            <div class="form-group mb-2">
-                <label for="street">Calle</label>
-                <input id="street" type="text" class="form-control" formControlName="street">
-            </div>
-            <div class="form-group mb-2">
-                <label for="suite">Apartamento</label>
-                <input id="suite" type="text" class="form-control" formControlName="suite">
-            </div>
-            <div class="form-group mb-2">
-                <label for="city">Ciudad</label>
-                <input id="city" type="text" class="form-control" formControlName="city">
-            </div>
-            <div class="form-group mb-2">
-                <label for="zipcode">Codigo</label>
-                <input id="zipcode" type="text" class="form-control" formControlName="zipcode">
-            </div>
-        </form>
-        <h4 class="card-header p-3 text-center">Geolocalizacion</h4>
-        <form [formGroup]="GeoFormulario" class="container mt-4">
-            <div class="form-group mb-2">
-                <label for="lat">Latitud</label>
-                <input id="lat" type="number" class="form-control" formControlName="lat">
-            </div>
-            <div class="form-group mb-2">
-                <label for="lng">Longitud</label>
-                <input id="lng" type="number" class="form-control" formControlName="lng">
-            </div>
-        <button class="btn btn-primary " (click)="createUser()">crear Usuario </button>
-        </form>
+  <div class="card-body">
 
-        
-    </div>
+    
+    <form [formGroup]="formulario" class="container mt-4">
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <label for="name">Nombre</label>
+          <input id="name" type="text" class="form-control" formControlName="name">
+        </div>
 
+        <div class="col-12 col-md-6">
+          <label for="email">Correo Electrónico</label>
+          <input id="email" type="text" class="form-control" formControlName="email">
+        </div>
+
+        <div class="col-12 col-md-6">
+          <label for="phone">Teléfono</label>
+          <input id="phone" type="text" class="form-control" formControlName="phone">
+        </div>
+
+        <div class="col-12 col-md-6">
+          <label for="address">Dirección</label>
+          <input id="address" type="text" class="form-control" formControlName="address">
+        </div>
+      </div>
+    </form>
+
+    
+    <h4 class="card-header p-3 text-center mt-4">Dirección</h4>
+    <form [formGroup]="AddressFormulario" class="container mt-4">
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-3">
+          <label for="street">Calle</label>
+          <input id="street" type="text" class="form-control" formControlName="street">
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <label for="suite">Apartamento</label>
+          <input id="suite" type="text" class="form-control" formControlName="suite">
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <label for="city">Ciudad</label>
+          <input id="city" type="text" class="form-control" formControlName="city">
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <label for="zipcode">Código</label>
+          <input id="zipcode" type="text" class="form-control" formControlName="zipcode">
+        </div>
+      </div>
+    </form>
+
+   
+    <h4 class="card-header p-3 text-center mt-4">Geolocalización</h4>
+    <form [formGroup]="GeoFormulario" class="container mt-4">
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <label for="lat">Latitud</label>
+          <input id="lat" type="number" class="form-control" formControlName="lat">
+        </div>
+
+        <div class="col-12 col-md-6">
+          <label for="lng">Longitud</label>
+          <input id="lng" type="number" class="form-control" formControlName="lng">
+        </div>
+      </div>
+
+      <div class="mt-4 d-flex justify-content-center">
+        <button class="btn btn-primary px-4" (click)="createUser()">Crear Usuario</button>
+      </div>
+    </form>
+
+  </div>
 </div>
