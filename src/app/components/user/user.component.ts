@@ -24,10 +24,10 @@ export class UserComponent implements OnInit {
     // creacion de formulario
     this.formulario = this.fb.group ({
       
-      name: ['', Validators.required],
-      email:['', Validators.required, Validators.email],
-      phone: ['', Validators.required],
-      address: ['', Validators.required],
+      name: ['' ],
+      email:[''],
+      phone: ['' ],
+      address: [''],
       
     })
 
